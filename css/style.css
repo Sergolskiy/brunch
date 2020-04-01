@@ -213,6 +213,29 @@ a:hover{
 }
 
 
+.breadcrumb {
+    padding-top: 35px ;
+}
+
+.breadcrumb__inner {
+
+}
+
+.breadcrumb__link {
+    font-size: 16px;
+    color: #343232;
+    position: relative;
+}
+
+.breadcrumb__link:after {
+    content: '/';
+}
+
+.breadcrumb__link:last-child:after {
+    display: none;
+}
+
+
 
 
 .top-slider__item{
@@ -523,6 +546,310 @@ a:hover{
 }
 
 
+.site-btn-black{
+
+}
+
+.site-btn-black-reverse{
+
+}
+
+.custom-container{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.custom-title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.custom-title__item{
+    font: 24px "Montserrat-SemiBold";
+    color: #343232;
+    text-align: center;
+}
+
+.custom-title__description{
+    font-size: 18px;
+    color: #343232;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.site-btn-black {
+    max-width: 220px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #232120;
+    border-radius: 4px;
+    font: 18px 'Montserrat-Medium';
+    transition: 0.3s;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-btn-black:hover {
+    box-shadow: 0 0 10px #c90832bd;
+    background-color: #c90832;
+}
+
+.site-btn-black-reverse {
+    background-color: #c90832;
+}
+
+.site-btn-black-reverse:hover {
+    box-shadow: 0 0 10px #2e2c2a;
+    background-color: #232120;
+}
+
+.catalog{
+
+}
+
+.catalog__inner{
+    padding-bottom: 95px;
+}
+
+.catalog__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    box-sizing: border-box;
+}
+
+.catalog__item{
+    padding: 0 15px;
+    width: 33.33333%;
+    margin-bottom: 30px;
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.catalog__item-content{
+    border: 1px solid #dedede;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.catalog__item-content:hover {
+    box-shadow: 0 0 40px -20px rgba(0, 0, 0, 0.52);
+}
+
+.catalog__item-img{
+    display: flex;
+    height: 240px;
+    width: 100%;
+}
+
+.catalog__item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.catalog__item-info{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 35px 15px;
+    height: 100%;
+}
+
+.catalog__item-name{
+    font: 24px "Montserrat-SemiBold";
+    color: #343232;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.catalog__item-description{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.catalog__item-piece{
+    font: 16px "Montserrat-SemiBold";
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.catalog__item-price{
+    font: 22px "Montserrat-SemiBold";
+    color: #c90832;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+.catalog__item-count{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catalog__item-count > span{
+    font-size: 14px;
+}
+
+.catalog__item-count-inner{
+    display: flex;
+    align-items: center;
+}
+
+
+/*fix for type number*/
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+/*fix for type number end*/
+
+.catalog__item-btn-minus{
+    font: 24px "Montserrat-SemiBold";
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+    transition: 0.3s;
+}
+
+.catalog__item-amount{
+    font: 24px "Montserrat-SemiBold";
+    height: 30px;
+    border: none;
+    max-width: 55px;
+    text-align: center;
+    outline: none;
+    padding: 0 10px;
+}
+
+.catalog__item-btn-plus{
+    font: 24px "Montserrat-SemiBold";
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.catalog__item-btn-minus:hover,
+.catalog__item-btn-plus:hover{
+    color: #c90832;
+}
+
+.catalog__item-btn-wrap{
+    padding: 0 35px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.catalog__bottom-btn-wrap{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.catalog__item-btn-more{
+    border-radius: 4px 0 0 4px;
+}
+
+.catalog__item-btn-cart {
+    max-width: 65px;
+    background-image: url("../image/cart-white.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+    border-radius: 0 4px 4px 0;
+}
+
+
+.contact {
+    padding-bottom: 50px;
+}
+
+
+.contact__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__item {
+    color: #343232;
+    font-size: 18px;
+}
+
+.contact__item a{
+    color: #343232;
+}
+
+.contact__item span {
+    position: relative;
+    padding-left: 50px;
+    display: block;
+    line-height: 28px;
+    padding-right: 20px;
+}
+
+.contact__item span:before {
+    content: '';
+    left: 0;
+    top: 2px;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.contact__item-address:before {
+    background-image: url("../image/icon_address.svg");
+}
+
+.contact__item-phone:before {
+    background-image: url("../image/icon_phone.svg");
+}
+
+.contact__item-mail:before {
+    background-image: url("../image/icon_mail.svg");
+}
+
+.contact__item-time:before {
+    background-image: url("../image/icon_time.svg");
+}
+
+.contact-map {
+    padding-bottom: 95px;
+}
+
+.contact-map iframe{
+    border: 0;
+    width: 100%;
+}
+
+
+
+
 
 @media (max-width: 1650px) {
     .header__menu {
@@ -676,8 +1003,17 @@ a:hover{
     .header__logo img {
         max-width: 140px;
     }
+
     .header__menu {
         max-width: 530px;
+    }
+
+    .catalog__item-info{
+        padding: 20px 15px 15px;
+    }
+
+    .catalog__item-btn-wrap{
+        padding: 0 15px 20px
     }
 }
 
@@ -687,6 +1023,7 @@ a:hover{
     .mobile{
         display: none;
     }
+
 }
 
 @media (max-width: 992px) {
@@ -885,6 +1222,37 @@ a:hover{
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    .site-btn-black{
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .catalog__item-count {
+        flex-direction: column;
+    }
+
+    .catalog__item-btn-cart {
+        background-size: 40%;
+    }
+
+    .catalog__item-name {
+        font-size: 20px;
+    }
+
+    .custom-title{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contact__list {
+        flex-direction: column;
+    }
+
+    .contact__item span {
+        margin-bottom: 15px;
+    }
+
 }
 
 
@@ -940,6 +1308,21 @@ a:hover{
         order: -1;
     }
 
+    .catalog__item {
+        width: 50%;
+    }
+
+    .catalog__bottom-btn-wrap {
+        margin-top: 40px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .catalog__item {
+        width: 100%;
+    }
 
 }
 
