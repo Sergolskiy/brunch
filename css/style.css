@@ -854,14 +854,25 @@ input[type="number"]:focus {
     width: 100%;
 }
 
-
-
-.product-page{
-
+.section__name{
+    font: 24px 'Montserrat-SemiBold';
+    color: #343232;
+    position: relative;
+    padding-left: 44px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
-.product{
-
+.section__name:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: #bf1238;
 }
 
 .product__inner{
@@ -932,8 +943,9 @@ input[type="number"]:focus {
 }
 
 .product__slider-small-wrap{
+    min-width: 120px;;
     max-width: 120px;;
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .product__slider-small{
@@ -966,8 +978,6 @@ input[type="number"]:focus {
     height: 100%;
     object-fit: cover;
 }
-
-
 
 .product__slider-small .slick-prev {
     bottom: -16px;
@@ -1066,12 +1076,240 @@ input[type="number"]:focus {
 }
 
 .product__info-btn-cart{
+    max-width: 280px;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+}
+
+.product__info-btn-cart-icon{
+    width: 60px;
+    height: 100%;
+    background-image: url('../image/cart-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 55%;
+}
+
+.cart{
 
 }
 
-.zoom {
+.cart__inner{
+    display: flex;
+}
+
+.cart-btn-wrap{
 
 }
+
+.cart-btn{
+
+}
+
+
+.checkout{
+
+}
+
+.checkout__inner{
+
+}
+
+.checkout__name{
+
+}
+
+.checkout__content{
+
+}
+
+.checkout__step{
+
+}
+
+.checkout__step--active{
+
+}
+
+.checkout__step-head{
+
+}
+
+.checkout__step-inner{
+
+}
+
+.checkout__row{
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.checkout__step-bottom{
+
+}
+
+.checkout__step-btn{
+
+}
+
+.checkout__step-btn-prev{
+
+}
+
+.checkout__step-btn-link{
+
+}
+
+.checkout__step-btn-next{
+
+}
+
+.checkout__step-tab{
+
+}
+
+.checkout__step-tab-item{
+
+}
+
+.checkout__step-tab-item{
+
+}
+
+.checkout__step-description{
+
+}
+
+.checkout__step-subcontent{
+
+}
+
+.checkout__step-input{
+
+}
+
+.checkout__step-input input{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    font-size: 16px;
+    background: white;
+    border: 1px solid #dedede;
+    padding: 0 20px;
+    outline: 0;
+}
+
+.checkout__step-radio{
+
+}
+
+.checkout__step-textarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.checkout__step-textarea textarea{
+    height: 120px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 540px;
+    font-size: 16px;
+    background: white;
+    border: 1px solid #dedede;
+    padding: 20px;
+    outline: 0;
+    resize: none;
+}
+
+.checkout__step-input-subtitle{
+    margin-bottom: 30px;
+}
+
+.checkout__step-checkboxes{
+
+}
+
+.checkout__step-checkbox{
+
+}
+
+
+.basket{
+
+}
+
+.basket__name{
+
+}
+
+.basket__inner{
+
+}
+
+.basket__list{
+
+}
+
+.basket__item{
+
+}
+
+.basket__item-img{
+
+}
+
+.basket__item-remove{
+
+}
+
+.basket__item-name{
+
+}
+
+.basket__item-num{
+
+}
+
+.basket__item-price{
+
+}
+
+.basket__item-amount{
+
+}
+
+.basket__promo{
+
+}
+
+.basket__promo-txt{
+
+}
+
+.basket__promo-input{
+
+}
+
+.basket__bottom{
+
+}
+
+.basket__bottom-delivery-price{
+
+}
+
+.basket__bottom-price{
+
+}
+
+.basket__bottom-fill-price{
+
+}
+
 
 
 
@@ -1233,6 +1471,25 @@ input[type="number"]:focus {
     }
 
 
+}
+
+@media (max-width: 1200px) {
+    .product__content{
+        justify-content: normal;
+    }
+
+    .product__slider {
+        max-width: 600px;
+    }
+
+    .product__slider-big-wrap {
+        max-width: 475px;
+    }
+
+    .product__info {
+        max-width: 380px;
+        padding-left: 30px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -1489,6 +1746,52 @@ input[type="number"]:focus {
         margin-bottom: 15px;
     }
 
+    .product__content {
+        flex-direction: column;
+    }
+
+    .product__slider {
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product__slider-small-wrap {
+        max-width: 390px;
+    }
+
+    .product__info {
+        padding-top: 20px;
+        padding-left: 0;
+        max-width: 100%;
+    }
+
+    .product__info-description {
+        align-items: center;
+    }
+
+    .product__info-txt{
+        text-align: center;
+    }
+
+    .product__info-btn-wrap {
+        min-width: 300px;
+    }
+
+    .product__content{
+        padding-bottom: 10px;
+    }
+
+    .product__name {
+        font-size: 20px;
+    }
+
+    .section__name {
+        font-size: 20px;
+    }
+
+
 }
 
 
@@ -1501,6 +1804,14 @@ input[type="number"]:focus {
 }
 
 @media (max-width: 768px) {
+
+    .breadcrumb{
+        padding-top: 10px;
+    }
+
+    .breadcrumb__link{
+        font-size: 12px;
+    }
 
     .header__cart-count {
         left: -10px;
@@ -1552,12 +1863,50 @@ input[type="number"]:focus {
         margin-top: 40px;
     }
 
+    .product__slider-big-item-inner {
+        height: 380px;
+    }
+
+    .product__name {
+        font-size: 18px;
+    }
+
+    .section__name {
+        font-size: 18px;
+    }
+
+    .product__inner {
+        padding-top: 30px;
+    }
+
 
 }
 
 @media (max-width: 500px) {
     .catalog__item {
         width: 100%;
+    }
+
+    .product__info-row{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .product__info-subtitle{
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .product__info-amount{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .product__info-price{
+        margin-right: 0;
     }
 
 }
@@ -1582,6 +1931,14 @@ input[type="number"]:focus {
     .header__right {
         margin-left: auto;
         margin-right: 10px;
+    }
+
+    .product__slider-small-item{
+        padding: 10px;
+    }
+
+    .product__slider-small-wrap {
+        max-width: 300px;
     }
 
 }

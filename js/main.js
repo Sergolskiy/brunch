@@ -27,6 +27,16 @@ $(document).ready(function () {
         verticalScrolling: true,
         centerMode: true,
         centerPadding: '0',
+				responsive: [
+					{
+						breakpoint: 992,
+						settings: {
+							verticalSwiping: false,
+							vertical: false,
+							verticalScrolling: false,
+						}
+					},
+				]
     });
 
 
@@ -39,9 +49,22 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.zoom').zoom({
-        magnify: 3
-    });
+
+		if ($(window).width() > 992) {
+
+			$('.zoomple').zoomple({
+				offset: {x: -100, y: -100},
+				zoomWidth: 200,
+				zoomHeight: 200,
+				roundedCorners: true,
+				showCursor: true
+			});
+
+		} else {
+			$('a.zoomple').click(function (e) {
+				e.preventDefault();
+			});
+		}
 
 });
 

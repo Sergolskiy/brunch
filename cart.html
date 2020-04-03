@@ -43,7 +43,7 @@
 		<div class="content-wrap">
 			<div class="header__inner">
 				<div class="header__logo">
-					<img src="image/logo.png" alt="img">
+					<img src="image/logo.png" alt="">
 				</div>
 				<div class="header-fixed-link">
 					<a href="#">
@@ -88,7 +88,7 @@
 							</a>
 						</li>
 						<li class="header__menu-item">
-							<a href="#" class="header__menu-link header__menu-link--active">
+							<a href="#" class="header__menu-link">
 								Каталог
 							</a>
 						</li>
@@ -156,31 +156,249 @@
 				<a class="breadcrumb__link" href="/" title="Главная страница">
 					<span>Главная</span>
 				</a>
-				<a class="breadcrumb__link" href="javascript:void(0);" title="Каталог">
+				<a class="breadcrumb__link" href="/catalog" title="Каталог">
 					<span>Каталог</span>
+				</a>
+				<a class="breadcrumb__link" href="javascript:void(0);" title="Каталог">
+					<span>Брускетта с тигровой креветкой, авокадо и творожным сыром</span>
 				</a>
 			</div>
 		</div>
 
 		<div class="content-wrap">
-			<div class="custom-container catalog-page">
-				<div class="custom-title catalog-title">
-					<div class="custom-title__item">
-						Catering
+			<div class="custom-container cart-page">
+
+				<div class="cart">
+					<div class="cart__inner">
+						<div class="checkout">
+							<div class="checkout__inner">
+								<div class="section__name checkout__name">
+									Оформление заказа
+								</div>
+								<div class="checkout__content">
+									<form action="">
+										<div class="checkout__step checkout__step-contact checkout__step--active">
+											<div class="checkout__step-head">
+												Контактная информация
+											</div>
+											<div class="checkout__step-inner">
+												<div class="checkout__row">
+													<div class="checkout__step-input">
+														<input type="text" placeholder="Ваше имя">
+													</div>
+												</div>
+												<div class="checkout__row">
+													<div class="checkout__step-input">
+														<input type="tel" placeholder="Телефон*">
+													</div>
+													<div class="checkout__step-input">
+														<input type="email" placeholder="E-mail">
+													</div>
+												</div>
+											</div>
+
+											<div class="checkout__step-bottom">
+												<div class="checkout__step-btn checkout__step-btn-prev">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														&lt;Назад
+													</a>
+												</div>
+												<div class="checkout__step-btn checkout__step-btn-next">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														Далее&gt;
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="checkout__step checkout__step-delivery">
+											<div class="checkout__step-head">
+												Способы доставки
+											</div>
+											<div class="checkout__step-inner">
+												<div class="checkout__step-tab">
+													<div class="checkout__step-tab-item checkout__step-tab-item--courier">
+														Доставка курьером
+													</div>
+													<div class="checkout__step-tab-item checkout__step-tab-item--pickup">
+														Самовывоз
+													</div>
+												</div>
+												<div class="checkout__step-description">
+													*Доставка осуществляется на следующий день после заказа
+												</div>
+												<div class="checkout__step-description">
+													*При заказе на сумму < 750 руб доставка курьером не осуществляется
+												</div>
+												<div class="checkout__step-subcontent checkout__step-subcontent--courier">
+													<div class="checkout__row">
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Дата*">
+														</div>
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Время*">
+														</div>
+													</div>
+													<div class="checkout__row">
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Город*">
+														</div>
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Улица*">
+														</div>
+													</div>
+													<div class="checkout__row">
+														<div class="checkout__step-input">
+															<input type="text" placeholder="№ дома*">
+														</div>
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Энаж*">
+														</div>
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Кв/офис*">
+														</div>
+													</div>
+												</div>
+												<div class="checkout__step-subcontent checkout__step-subcontent--pickup">
+
+												</div>
+											</div>
+
+											<div class="checkout__step-bottom">
+												<div class="checkout__step-btn checkout__step-btn-prev">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														&lt;Назад
+													</a>
+												</div>
+												<div class="checkout__step-btn checkout__step-btn-next">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														Далее&gt;
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="checkout__step checkout__step-pay">
+											<div class="checkout__step-head">
+												Способы оплаты
+											</div>
+											<div class="checkout__row">
+												<div class="checkout__step-radio">
+													<input type="radio" id="cashPayment" name="checkout-payment">
+													<label for="cashPayment">Оплата наличными</label>
+												</div>
+												<div class="checkout__step-radio">
+													<input type="radio" id="cardPayment" name="checkout-payment">
+													<label for="cardPayment">Оплата картой курьеру</label>
+												</div>
+											</div>
+											<div class="checkout__step-inner">
+												<div class="checkout__row">
+													<div class="checkout__step-textarea">
+														<span class="checkout__step-input-subtitle">
+															Комментарий к заказу
+														</span>
+														<textarea></textarea>
+													</div>
+												</div>
+												<div class="checkout__row">
+													<div class="checkout__checkboxes">
+														<div class="checkout__checkbox">
+															<input type="checkbox" id="termsPayment" checked>
+															<label for="termsPayment">Я принимаю условия оплаты</label>
+														</div>
+														<div class="checkout__checkbox">
+															<input type="checkbox" id="сonsentPersonalData" checked>
+															<label for="сonsentPersonalData">Я даю согласие на обработку персональных данных</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="checkout__step-bottom">
+												<div class="checkout__step-btn checkout__step-btn-prev">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														&lt;Назад
+													</a>
+												</div>
+												<div class="checkout__step-btn checkout__step-btn-next">
+													<a href="javascript:void(0);" class="checkout__step-btn-link">
+														Далее&gt;
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="basket">
+							<div class="section__name basket__name">
+								Корзина
+							</div>
+							<div class="basket__inner">
+								<div class="basket__list">
+									<div class="basket__item">
+										<div class="basket__item-img">
+											<img src="image/im.png" alt="">
+											<a href="javascript:void(0);" class="basket__item-remove"></a>
+										</div>
+										<div class="basket__item-name">
+											Брускетта с тигровой креветкой, авокадо и творожным сыром, 55 гр
+										</div>
+										<div class="basket__item-num">
+											<div class="basket__item-price">
+												180 руб
+											</div>
+											<div class="basket__item-amount">
+												<span class="catalog__item-btn-minus">-</span>
+												<input class="catalog__item-amount" type="number" value="1">
+												<span class="catalog__item-btn-plus">+</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="basket__promo">
+									<div class="basket__promo-txt">
+										Использовать промокод:
+									</div>
+									<div class="basket__promo-input">
+										<input type="text" placeholder="XX XXX">
+									</div>
+									<div class="basket__bottom">
+										<div class="basket__bottom-delivery-price">
+											Доставка:
+											<span class="basket__bottom-price">
+												100 руб
+											</span>
+										</div>
+										<div class="basket__bottom-fill-price">
+											К оплате
+											<span class="basket__bottom-price">
+												460 руб
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="custom-title__description">
-						*доступен при заказе от 5 000 рублей
+					<div class="cart-btn-wrap">
+						<a href="#" class="site-btn cart-btn">Подтвердить заказ</a>
 					</div>
 				</div>
 
+				<div class="advice">
 
-				<div class="catalog">
-					<div class="catalog__inner">
+					<div class="custom-title advice-title">
+						<div class="custom-title__item">
+							Советуем попробовать
+						</div>
+					</div>
+					<div class="advice__content">
 						<div class="catalog__list">
 							<div class="catalog__item">
 								<div class="catalog__item-content">
 									<div class="catalog__item-img">
-										<img src="image/slider.png" alt="img">
+										<img src="image/slider.png" alt="">
 									</div>
 									<div class="catalog__item-info">
 										<div class="catalog__item-name">
@@ -216,7 +434,7 @@
 							<div class="catalog__item">
 								<div class="catalog__item-content">
 									<div class="catalog__item-img">
-										<img src="image/catalog-item.png" alt="img">
+										<img src="image/catalog-item.png" alt="">
 									</div>
 									<div class="catalog__item-info">
 										<div class="catalog__item-name">
@@ -251,7 +469,7 @@
 							<div class="catalog__item">
 								<div class="catalog__item-content">
 									<div class="catalog__item-img">
-										<img src="image/catalog-item.png" alt="img">
+										<img src="image/catalog-item.png" alt="">
 									</div>
 									<div class="catalog__item-info">
 										<div class="catalog__item-name">
@@ -259,111 +477,6 @@
 										</div>
 										<div class="catalog__item-description">
 											Тигровая креветка
-										</div>
-										<div class="catalog__item-piece">
-											1 шт - 55 гр
-										</div>
-										<div class="catalog__item-price">
-											180 руб
-										</div>
-										<div class="catalog__item-count">
-										<span>
-											Выберите количество:
-										</span>
-											<div class="catalog__item-count-inner">
-												<span class="catalog__item-btn-minus">-</span>
-												<input class="catalog__item-amount" type="number" value="1">
-												<span class="catalog__item-btn-plus">+</span>
-											</div>
-										</div>
-									</div>
-									<div class="catalog__item-btn-wrap">
-										<a href="javascript:void(0);" class="site-btn-black catalog__item-btn-more">Подробнее</a>
-										<a href="javascript:void(0);" class="site-btn-black site-btn-black-reverse catalog__item-btn-cart"></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog__item">
-								<div class="catalog__item-content">
-									<div class="catalog__item-img">
-										<img src="image/catalog-item.png" alt="img">
-									</div>
-									<div class="catalog__item-info">
-										<div class="catalog__item-name">
-											Брускетта
-										</div>
-										<div class="catalog__item-description">
-											Тигровая креветка, авокадо и творожный сыр
-										</div>
-										<div class="catalog__item-piece">
-											1 шт - 55 гр
-										</div>
-										<div class="catalog__item-price">
-											180 руб
-										</div>
-										<div class="catalog__item-count">
-										<span>
-											Выберите количество:
-										</span>
-											<div class="catalog__item-count-inner">
-												<span class="catalog__item-btn-minus">-</span>
-												<input class="catalog__item-amount" type="number" value="1">
-												<span class="catalog__item-btn-plus">+</span>
-											</div>
-										</div>
-									</div>
-									<div class="catalog__item-btn-wrap">
-										<a href="javascript:void(0);" class="site-btn-black catalog__item-btn-more">Подробнее</a>
-										<a href="javascript:void(0);" class="site-btn-black site-btn-black-reverse catalog__item-btn-cart"></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog__item">
-								<div class="catalog__item-content">
-									<div class="catalog__item-img">
-										<img src="image/catalog-item.png" alt="img">
-									</div>
-									<div class="catalog__item-info">
-										<div class="catalog__item-name">
-											Брускетта
-										</div>
-										<div class="catalog__item-description">
-											Тигровая креветка, авокадо и творожный сыр
-										</div>
-										<div class="catalog__item-piece">
-											1 шт - 55 гр
-										</div>
-										<div class="catalog__item-price">
-											180 руб
-										</div>
-										<div class="catalog__item-count">
-										<span>
-											Выберите количество:
-										</span>
-											<div class="catalog__item-count-inner">
-												<span class="catalog__item-btn-minus">-</span>
-												<input class="catalog__item-amount" type="number" value="1">
-												<span class="catalog__item-btn-plus">+</span>
-											</div>
-										</div>
-									</div>
-									<div class="catalog__item-btn-wrap">
-										<a href="javascript:void(0);" class="site-btn-black catalog__item-btn-more">Подробнее</a>
-										<a href="javascript:void(0);" class="site-btn-black site-btn-black-reverse catalog__item-btn-cart"></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog__item">
-								<div class="catalog__item-content">
-									<div class="catalog__item-img">
-										<img src="image/catalog-item.png" alt="img">
-									</div>
-									<div class="catalog__item-info">
-										<div class="catalog__item-name">
-											Брускетта
-										</div>
-										<div class="catalog__item-description">
-											Тигровая креветка, авокадо и творожный сыр
 										</div>
 										<div class="catalog__item-piece">
 											1 шт - 55 гр
@@ -389,12 +502,12 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="catalog__bottom-btn-wrap">
 							<a href="#" class="site-btn catalog__bottom-btn-more">Показать ещё</a>
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 
@@ -414,7 +527,7 @@
 					</div>
 
 					<div class="footer__center">
-						<img src="image/footer-logo.png" alt="img" class="footer__logo">
+						<img src="image/footer-logo.png" alt="" class="footer__logo">
 						<div class="footer__social">
 							<a href="#">
 								<svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
