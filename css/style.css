@@ -1090,29 +1090,40 @@ input[type="number"]:focus {
     background-size: 55%;
 }
 
-.cart{
-
-}
 
 .cart__inner{
-    display: flex;
+  display: flex;
+  margin: 0 -15px;
+	padding-bottom: 40px;
+  padding-top: 60px;
+	border-bottom: 1px solid #dedede;
 }
 
 .cart-btn-wrap{
-
+	display: flex;
+	justify-content: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #dedede;
 }
 
 .cart-btn{
+	max-width: 380px;
+	width: 100%;
+}
 
+.cart + .advice {
+    padding-bottom: 100px;
 }
 
 
 .checkout{
-
+  padding: 0 15px;
+  width: 50%;
 }
 
 .checkout__inner{
-
+  /*max-width: 540px;*/
+  width: 100%;
 }
 
 .checkout__name{
@@ -1127,119 +1138,284 @@ input[type="number"]:focus {
 
 }
 
-.checkout__step--active{
+.checkout__step-content {
+	max-height: 55px;
+	overflow: hidden;
+	transition: 0.5s;
+}
 
+.checkout__step--active .checkout__step-content{
+	max-height: 1000px;
 }
 
 .checkout__step-head{
+  margin-top: 15px;
+	margin-bottom: 15px;
+  font: 16px 'Montserrat-Bold';
+  color: #343232;
+  height: 30px;
+  position: relative;
+  /*cursor: pointer;*/
+}
 
+/*.checkout__step-head:hover {*/
+/*	color: #bf1238;*/
+/*}*/
+
+.checkout__step-head:after{
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.checkout__step-head:hover:after{
+	content: '+';
+	/*color: #bf1238;*/
+}
+
+.checkout__step--active .checkout__step-head{
+  color: #bf1238;
+}
+
+.checkout__step--active .checkout__step-head:after{
+  content: '-';
+  color: #bf1238;
+	right: 2px;
 }
 
 .checkout__step-inner{
-
+  border-bottom: 1px solid #dedede;
 }
 
-.checkout__row{
-    margin-bottom: 25px;
-    display: flex;
-}
-
-.checkout__step-bottom{
-
-}
-
-.checkout__step-btn{
-
-}
-
-.checkout__step-btn-prev{
-
-}
-
-.checkout__step-btn-link{
-
-}
-
-.checkout__step-btn-next{
-
-}
-
-.checkout__step-tab{
-
-}
-
-.checkout__step-tab-item{
-
-}
-
-.checkout__step-tab-item{
-
-}
-
-.checkout__step-description{
-
-}
-
-.checkout__step-subcontent{
-
-}
 
 .checkout__step-input{
-
+  padding: 0 15px;
+  width: 100%;
 }
 
 .checkout__step-input input{
-    height: 45px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 540px;
-    font-size: 16px;
-    background: white;
-    border: 1px solid #dedede;
-    padding: 0 20px;
-    outline: 0;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  background: white;
+  border: 1px solid #dedede;
+  padding: 0 20px;
+  outline: 0;
 }
 
-.checkout__step-radio{
+.checkout__step-input input[type="text"].required.error,
+.checkout__step-input input[type="tel"].required.error,
+.checkout__step-input input[type="email"].required.error {
+    border-color: red;
+}
 
+
+.checkout__step-radio input{
+  display: none;
+}
+
+.checkout__step-radio label{
+  color: #343232;
+  font: 16px 'Montserrat-SemiBold';
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+}
+
+.checkout__step-radio label:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  background: url("../image/radiobutton.svg") center no-repeat;
+  background-size: contain;
+}
+
+.checkout__step-radio input:checked + label:before{
+  background: url("../image/radiobutton--active.svg") center no-repeat;
+}
+
+.checkout__step-radio input:checked + label{
+  color: #bf1238;
 }
 
 .checkout__step-textarea{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .checkout__step-textarea textarea{
-    height: 120px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 540px;
-    font-size: 16px;
-    background: white;
-    border: 1px solid #dedede;
-    padding: 20px;
-    outline: 0;
-    resize: none;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 540px;
+  font-size: 16px;
+  background: white;
+  border: 1px solid #dedede;
+  padding: 20px;
+  outline: 0;
+  resize: none;
 }
 
 .checkout__step-input-subtitle{
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .checkout__step-checkboxes{
 
 }
 
-.checkout__step-checkbox{
+.checkout__step-checkbox {
+  margin-bottom: 5px;
+}
 
+.checkout__step-checkbox input{
+	display: none;
 }
 
 
-.basket{
+.checkout__step-checkbox label{
+	font-size: 12px;
+	color: #686767;
+	position: relative;
+	padding-left: 30px;
+}
 
+.checkout__step-checkbox label:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	width: 13px;
+	height: 13px;
+	border: 1px solid #dedede;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.checkout__step-checkbox input:checked + label:before{
+	background-image: url("../image/icon-check.svg");
+}
+
+.checkout__row{
+  margin-bottom: 25px;
+  display: flex;
+}
+
+.checkout__row--input{
+  margin: 0 -15px 25px;
+}
+
+.checkout__row--input--w50 .checkout__step-input{
+  width: 50%;
+}
+
+.checkout__row--input--w33 .checkout__step-input{
+  width: 33.3333%;
+}
+
+.checkout__row--radio {
+  justify-content: space-between;
+}
+
+.checkout__step-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 30px;
+}
+
+.checkout__step-btn{
+
+}
+
+.checkout__step-btn-link{
+  font-size: 16px;
+  color: #232120;
+}
+
+.checkout__step-btn-prev{
+	margin-right: auto;
+}
+
+.checkout__step-btn-prev .checkout__step-btn-link{
+  padding: 15px 15px 15px 0;
+}
+
+.checkout__step-btn-next{
+	margin-left: auto;
+}
+
+.checkout__step-btn-next .checkout__step-btn-link{
+  font-family: 'Montserrat-Bold';
+  color: #bf1238;
+  padding: 15px 0 15px 15px;
+}
+
+.checkout__step:first-child .checkout__step-btn-prev {
+	display: none;
+}
+
+.checkout__step:last-child .checkout__step-btn-next {
+	display: none;
+}
+
+.checkout__step-tab{
+  display: flex;
+  margin: 0 -5px;
+}
+
+.checkout__step-tab-item{
+  width: 50%;
+  font: 16px 'Montserrat-SemiBold';
+  color: #343232;
+  border-bottom: 1px solid #dedede;
+  height: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+	transition: 0.3s;
+  white-space: nowrap;
+  padding: 0 5px;
+}
+
+.checkout__step-tab-item:hover {
+	color: #bf1238;
+}
+
+.checkout__step-tab-item--active {
+  color: #bf1238;
+  border-bottom: 1px solid #bf1238;
+}
+
+.checkout__step-description{
+  font-size: 12px;
+  color: #686767;
+  margin-bottom: 10px;
+}
+
+.checkout__step-subcontent{
+  margin-top: 10px;
+	display: none;
+	flex-direction: column;
+}
+
+.checkout__step-subcontent--active{
+	display: flex;
+}
+
+.basket{
+  padding: 0 15px;
+  width: 50%;
 }
 
 .basket__name{
@@ -1251,31 +1427,81 @@ input[type="number"]:focus {
 }
 
 .basket__list{
-
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 25px;
 }
 
 .basket__item{
-
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 1px solid #dedede;
 }
 
 .basket__item-img{
+	height: 85px;
+	max-width: 95px;
+	width: 100%;
+	display: flex;
+	position: relative;
+}
 
+.basket__item-img-link {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.basket__item-img-link img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
 }
 
 .basket__item-remove{
+	position: absolute;
+	bottom: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #dedede;
+	background-image: url("../image/icon-remove.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 0.3s;
+}
 
+.basket__item-remove:hover{
+	background-color: #bf1238;
 }
 
 .basket__item-name{
+	max-width: 230px;
+	width: 100%;
+	padding: 0 10px;
+	color: #343232;
+	font-size: 16px;
+  transition: 0.3s;
+}
 
+.basket__item-name:hover {
+  color: #bf1238;
 }
 
 .basket__item-num{
-
+	max-width: 130px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .basket__item-price{
-
+	font: 24px 'Montserrat-SemiBold';
+	margin-bottom: 10px;
 }
 
 .basket__item-amount{
@@ -1283,38 +1509,63 @@ input[type="number"]:focus {
 }
 
 .basket__promo{
-
+	display: flex;
+	height: 50px;
+	align-items: center;
+	padding: 0 25px;
+	background: #dedede;
 }
 
 .basket__promo-txt{
-
+	font: 16px 'Montserrat-SemiBold';
+	margin-right: 25px;
+  white-space: nowrap;
 }
 
-.basket__promo-input{
+.basket__promo-input input{
+    width: 100%;
+}
 
+.basket__promo-input input{
+	background: transparent;
+	outline: 0;
+	border: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 .basket__bottom{
-
+	display: flex;
+	margin-top: 30px;
 }
 
 .basket__bottom-delivery-price{
+	margin-right: auto;
+	font: 16px 'Montserrat-Bold';
+	color: #343232;
+}
 
+.basket__bottom-full-price{
+	margin-left: auto;
+	font: 16px 'Montserrat-Bold';
+	color: #343232;
 }
 
 .basket__bottom-price{
-
-}
-
-.basket__bottom-fill-price{
-
+	font: 24px 'Montserrat-SemiBold';
+	color: #bf1238;
 }
 
 
 
 
 
-
+@media (min-width: 1920px) {
+	.content-wrap {
+		margin: 0 auto;
+	}
+}
 
 @media (max-width: 1650px) {
     .header__menu {
@@ -1490,6 +1741,7 @@ input[type="number"]:focus {
         max-width: 380px;
         padding-left: 30px;
     }
+
 }
 
 @media (max-width: 1100px) {
@@ -1507,6 +1759,11 @@ input[type="number"]:focus {
 
     .catalog__item-btn-wrap{
         padding: 0 15px 20px
+    }
+
+    .basket__item-name {
+        padding-left: 30px;
+        max-width: 100%;
     }
 }
 
@@ -1791,6 +2048,22 @@ input[type="number"]:focus {
         font-size: 20px;
     }
 
+    .cart__inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .checkout {
+        max-width: 768px;
+        width: 100%;
+    }
+
+    .basket {
+        max-width: 768px;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
 
 }
 
@@ -1908,6 +2181,109 @@ input[type="number"]:focus {
     .product__info-price{
         margin-right: 0;
     }
+
+    .cart__inner{
+        padding-bottom: 0;
+        padding-top: 30px;
+    }
+
+    .checkout__row {
+        margin-bottom: 15px;
+    }
+
+    .checkout__row--input-w33 {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .checkout__row--input-w50 {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .checkout__row--input-w50 .checkout__step-input{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .checkout__row--input-w33 .checkout__step-input{
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .checkout__row--radio {
+        flex-direction: column;
+    }
+
+    .checkout__step-radio {
+        margin-bottom: 10px;
+    }
+
+    .checkout__step-input-subtitle {
+        margin-bottom: 15px;
+    }
+
+    .basket__item {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .basket__item-img {
+        margin-bottom: 25px;
+    }
+
+    .basket__item-name {
+        text-align: center;
+        padding: 0;
+    }
+
+    .basket__item-num {
+        margin-top: 15px;
+    }
+
+    .basket__bottom-price {
+        font-size: 22px;
+    }
+
+    .basket__promo {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
+        height: auto;
+    }
+
+    .basket__promo-txt {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .basket__promo-input input {
+        text-align: center;
+    }
+
+    .basket__bottom {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .basket__bottom-delivery-price {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .basket__bottom-full-price {
+        margin: 0;
+    }
+
+    .checkout__step-tab-item {
+        width: 100%;
+    }
+
+    .section__name {
+        padding-left: 20px;
+    }
+
 
 }
 

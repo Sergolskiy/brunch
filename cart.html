@@ -178,151 +178,161 @@
 								<div class="checkout__content">
 									<form action="">
 										<div class="checkout__step checkout__step-contact checkout__step--active">
-											<div class="checkout__step-head">
-												Контактная информация
-											</div>
-											<div class="checkout__step-inner">
-												<div class="checkout__row">
-													<div class="checkout__step-input">
-														<input type="text" placeholder="Ваше имя">
+											<div class="checkout__step-content">
+												<div class="checkout__step-head">
+													Контактная информация
+												</div>
+												<div class="checkout__step-inner">
+													<div class="checkout__row checkout__row--input">
+														<div class="checkout__step-input">
+															<input type="text" placeholder="Ваше имя">
+														</div>
+													</div>
+													<div class="checkout__row checkout__row--input checkout__row--input-w50">
+														<div class="checkout__step-input">
+															<input class="required phonemask" type="tel" placeholder="Телефон*">
+														</div>
+														<div class="checkout__step-input">
+															<input class="required" type="email" placeholder="E-mail">
+														</div>
 													</div>
 												</div>
-												<div class="checkout__row">
-													<div class="checkout__step-input">
-														<input type="tel" placeholder="Телефон*">
-													</div>
-													<div class="checkout__step-input">
-														<input type="email" placeholder="E-mail">
-													</div>
-												</div>
-											</div>
 
-											<div class="checkout__step-bottom">
-												<div class="checkout__step-btn checkout__step-btn-prev">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														&lt;Назад
-													</a>
-												</div>
-												<div class="checkout__step-btn checkout__step-btn-next">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														Далее&gt;
-													</a>
+												<div class="checkout__step-bottom">
+													<div class="checkout__step-btn checkout__step-btn-prev">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															&lt;Назад
+														</a>
+													</div>
+													<div class="checkout__step-btn checkout__step-btn-next">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															Далее&gt;
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="checkout__step checkout__step-delivery">
-											<div class="checkout__step-head">
-												Способы доставки
-											</div>
-											<div class="checkout__step-inner">
-												<div class="checkout__step-tab">
-													<div class="checkout__step-tab-item checkout__step-tab-item--courier">
-														Доставка курьером
+											<div class="checkout__step-content">
+												<div class="checkout__step-head">
+													Способы доставки
+												</div>
+												<div class="checkout__step-inner">
+													<div class="checkout__step-tab">
+														<div class="checkout__step-tab-item checkout__step-tab-item--active checkout__step-tab-item--courier">
+															Доставка курьером
+														</div>
+														<div class="checkout__step-tab-item checkout__step-tab-item--pickup">
+															Самовывоз
+														</div>
 													</div>
-													<div class="checkout__step-tab-item checkout__step-tab-item--pickup">
-														Самовывоз
+													<div class="checkout__step-subcontent checkout__step-subcontent--active checkout__step-subcontent--courier">
+														<div class="checkout__step-description">
+															*Доставка осуществляется на следующий день после заказа
+														</div>
+														<div class="checkout__step-description">
+															*При заказе на сумму < 750 руб доставка курьером не осуществляется
+														</div>
+														<div class="checkout__row checkout__row--input  checkout__row--input-w50">
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Дата*">
+															</div>
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Время*">
+															</div>
+														</div>
+														<div class="checkout__row checkout__row--input  checkout__row--input-w50">
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Город*">
+															</div>
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Улица*">
+															</div>
+														</div>
+														<div class="checkout__row checkout__row--input  checkout__row--input-w33">
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="№ дома*">
+															</div>
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Этаж*">
+															</div>
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Кв/офис*">
+															</div>
+														</div>
+													</div>
+													<div class="checkout__step-subcontent checkout__step-subcontent--pickup">
+														<div class="checkout__row checkout__row--input">
+															<div class="checkout__step-input">
+																<input class="required" type="text" placeholder="Выберите магазин*">
+															</div>
+														</div>
 													</div>
 												</div>
-												<div class="checkout__step-description">
-													*Доставка осуществляется на следующий день после заказа
-												</div>
-												<div class="checkout__step-description">
-													*При заказе на сумму < 750 руб доставка курьером не осуществляется
-												</div>
-												<div class="checkout__step-subcontent checkout__step-subcontent--courier">
-													<div class="checkout__row">
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Дата*">
-														</div>
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Время*">
-														</div>
-													</div>
-													<div class="checkout__row">
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Город*">
-														</div>
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Улица*">
-														</div>
-													</div>
-													<div class="checkout__row">
-														<div class="checkout__step-input">
-															<input type="text" placeholder="№ дома*">
-														</div>
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Энаж*">
-														</div>
-														<div class="checkout__step-input">
-															<input type="text" placeholder="Кв/офис*">
-														</div>
-													</div>
-												</div>
-												<div class="checkout__step-subcontent checkout__step-subcontent--pickup">
 
-												</div>
-											</div>
-
-											<div class="checkout__step-bottom">
-												<div class="checkout__step-btn checkout__step-btn-prev">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														&lt;Назад
-													</a>
-												</div>
-												<div class="checkout__step-btn checkout__step-btn-next">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														Далее&gt;
-													</a>
+												<div class="checkout__step-bottom">
+													<div class="checkout__step-btn checkout__step-btn-prev">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															&lt;Назад
+														</a>
+													</div>
+													<div class="checkout__step-btn checkout__step-btn-next">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															Далее&gt;
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="checkout__step checkout__step-pay">
-											<div class="checkout__step-head">
-												Способы оплаты
-											</div>
-											<div class="checkout__row">
-												<div class="checkout__step-radio">
-													<input type="radio" id="cashPayment" name="checkout-payment">
-													<label for="cashPayment">Оплата наличными</label>
+											<div class="checkout__step-content">
+												<div class="checkout__step-head">
+													Способы оплаты
 												</div>
-												<div class="checkout__step-radio">
-													<input type="radio" id="cardPayment" name="checkout-payment">
-													<label for="cardPayment">Оплата картой курьеру</label>
-												</div>
-											</div>
-											<div class="checkout__step-inner">
-												<div class="checkout__row">
-													<div class="checkout__step-textarea">
-														<span class="checkout__step-input-subtitle">
-															Комментарий к заказу
-														</span>
-														<textarea></textarea>
+												<div class="checkout__row checkout__row--radio">
+													<div class="checkout__step-radio">
+														<input type="radio" id="cashPayment" name="checkout-payment" checked>
+														<label for="cashPayment">Оплата наличными</label>
+													</div>
+													<div class="checkout__step-radio">
+														<input type="radio" id="cardPayment" name="checkout-payment">
+														<label for="cardPayment">Оплата картой курьеру</label>
 													</div>
 												</div>
-												<div class="checkout__row">
-													<div class="checkout__checkboxes">
-														<div class="checkout__checkbox">
-															<input type="checkbox" id="termsPayment" checked>
-															<label for="termsPayment">Я принимаю условия оплаты</label>
+												<div class="checkout__step-inner">
+													<div class="checkout__row">
+														<div class="checkout__step-textarea">
+															<span class="checkout__step-input-subtitle">
+																Комментарий к заказу
+															</span>
+															<textarea></textarea>
 														</div>
-														<div class="checkout__checkbox">
-															<input type="checkbox" id="сonsentPersonalData" checked>
-															<label for="сonsentPersonalData">Я даю согласие на обработку персональных данных</label>
+													</div>
+													<div class="checkout__row">
+														<div class="checkout__step-checkboxes">
+															<div class="checkout__step-checkbox">
+																<input type="checkbox" id="termsPayment" checked required>
+																<label for="termsPayment">Я принимаю условия оплаты</label>
+															</div>
+															<div class="checkout__step-checkbox">
+																<input type="checkbox" id="сonsentPersonalData" checked required>
+																<label for="сonsentPersonalData">Я даю согласие на обработку персональных данных</label>
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
 
-											<div class="checkout__step-bottom">
-												<div class="checkout__step-btn checkout__step-btn-prev">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														&lt;Назад
-													</a>
-												</div>
-												<div class="checkout__step-btn checkout__step-btn-next">
-													<a href="javascript:void(0);" class="checkout__step-btn-link">
-														Далее&gt;
-													</a>
+												<div class="checkout__step-bottom">
+													<div class="checkout__step-btn checkout__step-btn-prev">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															&lt;Назад
+														</a>
+													</div>
+													<div class="checkout__step-btn checkout__step-btn-next">
+														<a href="javascript:void(0);" class="checkout__step-btn-link">
+															Далее&gt;
+														</a>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -338,15 +348,38 @@
 								<div class="basket__list">
 									<div class="basket__item">
 										<div class="basket__item-img">
-											<img src="image/im.png" alt="">
+											<a href="#" class="basket__item-img-link">
+												<img src="image/im.png" alt="">
+											</a>
 											<a href="javascript:void(0);" class="basket__item-remove"></a>
 										</div>
-										<div class="basket__item-name">
+										<a href="#" class="basket__item-name">
 											Брускетта с тигровой креветкой, авокадо и творожным сыром, 55 гр
-										</div>
+										</a>
 										<div class="basket__item-num">
 											<div class="basket__item-price">
 												180 руб
+											</div>
+											<div class="basket__item-amount">
+												<span class="catalog__item-btn-minus">-</span>
+												<input class="catalog__item-amount" type="number" value="1">
+												<span class="catalog__item-btn-plus">+</span>
+											</div>
+										</div>
+									</div>
+									<div class="basket__item">
+										<div class="basket__item-img">
+											<a href="#" class="basket__item-img-link">
+												<img src="image/im.png" alt="">
+											</a>
+											<a href="javascript:void(0);" class="basket__item-remove"></a>
+										</div>
+										<a href="#" class="basket__item-name">
+											Брускетта с тигровой креветкой, авокадо, творожным сыром и ещё миллиардом ингредиентов, 99999 гр
+										</a>
+										<div class="basket__item-num">
+											<div class="basket__item-price">
+												9999 руб
 											</div>
 											<div class="basket__item-amount">
 												<span class="catalog__item-btn-minus">-</span>
@@ -363,19 +396,19 @@
 									<div class="basket__promo-input">
 										<input type="text" placeholder="XX XXX">
 									</div>
-									<div class="basket__bottom">
-										<div class="basket__bottom-delivery-price">
-											Доставка:
-											<span class="basket__bottom-price">
-												100 руб
-											</span>
-										</div>
-										<div class="basket__bottom-fill-price">
-											К оплате
-											<span class="basket__bottom-price">
-												460 руб
-											</span>
-										</div>
+								</div>
+								<div class="basket__bottom">
+									<div class="basket__bottom-delivery-price">
+										Доставка:
+										<span class="basket__bottom-price">
+											100 руб
+										</span>
+									</div>
+									<div class="basket__bottom-full-price">
+										К оплате:
+										<span class="basket__bottom-price">
+											460 руб
+										</span>
 									</div>
 								</div>
 							</div>
@@ -607,6 +640,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/zoomple.js"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

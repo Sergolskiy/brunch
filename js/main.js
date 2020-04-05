@@ -66,5 +66,70 @@ $(document).ready(function () {
 			});
 		}
 
+		$(document).on('click', '.checkout__step-head', function (e) {
+			var el = $(this);
+				// $(this).closest('.checkout__step').toggleClass('checkout__step--active');
+		});
+
+		$(document).on('click', '.checkout__step-btn-prev .checkout__step-btn-link', function (e) {
+			var el = $(this);
+			e.preventDefault();
+			$(this).closest('.checkout__step').removeClass('checkout__step--active');
+			$(this).closest('.checkout__step').prev().addClass('checkout__step--active');
+		});
+
+		$(document).on('click', '.checkout__step-btn-next .checkout__step-btn-link', function (e) {
+			var el = $(this);
+			e.preventDefault();
+			if (cartValid(el)) {
+				$(this).closest('.checkout__step').removeClass('checkout__step--active');
+				$(this).closest('.checkout__step').next().addClass('checkout__step--active');
+			}
+		});
+
+		$(document).on('click', '.checkout__step-tab-item', function (e) {
+			$('.checkout__step-tab-item').removeClass('checkout__step-tab-item--active');
+			$(this).addClass('checkout__step-tab-item--active');
+			if($(this).hasClass('checkout__step-tab-item--courier')) {
+				$('.checkout__step-subcontent').removeClass('checkout__step-subcontent--active');
+				$('.checkout__step-subcontent--courier').addClass('checkout__step-subcontent--active');
+			}
+			if($(this).hasClass('checkout__step-tab-item--pickup')) {
+				$('.checkout__step-subcontent').removeClass('checkout__step-subcontent--active');
+				$('.checkout__step-subcontent--pickup').addClass('checkout__step-subcontent--active');
+			}
+		});
+
+		function cartValid(e) {
+			var valid = true;
+			var step = e.closest('.checkout__step');
+			var flag = step.find('.checkout__step-subcontent').hasClass('checkout__step-subcontent--active');
+
+			step.find('input.required').each(function () {
+				$(this).removeClass('error');
+				if( $(this).val().length > 0) {
+					$(this).removeClass('error');
+				} else {
+					$(this).addClass('error');
+				}
+			});
+
+			if(flag) {
+				step.find('.checkout__step-subcontent:not(.checkout__step-subcontent--active)').find('input.required').each(function () {
+					$(this).removeClass('error');
+				});
+			}
+
+			step.find('input.required').each(function () {
+				if($(this).hasClass('error')) {
+					valid = false;
+				}
+			});
+
+			return valid;
+		}
+
+	  $('.phonemask').inputmask('+38-099-999-99-99');
+
 });
 
